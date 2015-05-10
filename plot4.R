@@ -14,11 +14,11 @@ dt$Date_time <- strptime(dt$Date_time, format = "%Y-%m-%d %H:%M:%S")
 ### plot 4 ###
 par(mfrow = c(2, 2))
 # plot global active power figure (topleft)
-plot(dt$Date_time, dt$Global_active_power, xlab = "Time", ylab = "Global Active power", type = "n")
+plot(dt$Date_time, dt$Global_active_power, xlab = "", ylab = "Global Active power", type = "n")
 lines(dt$Date_time, dt$Global_active_power)
 
 # plot Voltage figure (topright)
-plot(dt$Date_time, dt$Voltage, xlab = "Time", ylab = "Voltage", type = "n")
+plot(dt$Date_time, dt$Voltage, xlab = "", ylab = "Voltage", type = "n")
 lines(dt$Date_time, dt$Voltage)
 
 # plot Energy sub metering figure (bottomleft)
@@ -32,7 +32,7 @@ legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty 
        col = c("black", "red", "blue"))
 
 # plot global reactive power figure (bottomright)
-plot(dt$Date_time, dt$Global_reactive_power, xlab = "Time", ylab = "Global Reactive Power", type = "n")
+plot(dt$Date_time, dt$Global_reactive_power,xlab = "", ylab = "Global Reactive Power", type = "n")
 lines(dt$Date_time, dt$Global_reactive_power)
 
 # output figure
